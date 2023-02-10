@@ -1,0 +1,100 @@
+/* #region ROOT */
+:root {
+    /* BG */
+    --main-bg-green: url(../IMG/BG_GREEN);
+    --main-bg-purple: url(../IMG/BG_PURPLE);
+
+    /* COLOR */
+    --main-color-black : #000000;
+    --main-color-black-o4 : #00000066;
+
+    --main-color-green : #086300;
+    --main-color-green-o4 : #08630080;
+    --main-color-greenLight : #d6ead4;
+    --main-color-greenLight-o4 : #a3c1a080;
+
+    /* FONTS */
+    --main-font : 'Black Ops One';
+}
+
+/* #endregion */
+
+/* #region START */
+
+    /* #region start-panel */
+
+    .start-panel {
+        width: 90vw;
+        height: 90vh;
+        margin-inline: 5vw;
+        margin-block: 5vh;
+    
+        position: relative;
+    
+        box-shadow: 20px 20px 10px var(--main-color-black-o4);
+    }
+
+    .start-panel-open {
+        opacity: 1;
+        animation: 1s linear openStartPanel;
+    }
+
+    .start-panel-hide {
+        opacity: 0;
+        animation: .3s linear hideStartPanel;
+    }
+    
+    @keyframes openStartPanel {
+        0%{
+            opacity: 0;
+            scale: .99;
+            box-shadow: none;
+        }
+        100%{
+            opacity: 1;
+            scale: 1;
+            box-shadow: 20px 20px 10px var(--main-color-black-o4);
+        }
+    }
+    
+    @keyframes hideStartPanel {
+        0%{
+            opacity: 1;
+            scale: 1;
+            box-shadow: 20px 20px 10px var(--main-color-black-o4);
+        }
+        100%{
+            opacity: 0;
+            scale: .99;
+            box-shadow: none;
+        }
+    }
+    
+    .start-panel:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        z-index: -1;
+
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .3;
+        background-image: var(--main-bg-green);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* #endregion */
+
+/* #endregion */
+
+/* #region TEST */
+
+.test {
+    z-index: 1000;
+}
+
+/* #endregion */
